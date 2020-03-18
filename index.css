@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+body{
+  background-color: #eee;
+}
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  background-color: #354457;
+  height: 70px;
+  line-height: 70px;
+  color: #b3bcc5;
+  font-size: 14px;
+  position: relative;
+}
+
+.header .logo img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.header .searchFram{
+  position: absolute;
+  right: 50px;
+  top: 0px;
+}
+.header .searchFram .search-content{
+  width: 100px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  padding-left: 5px;
+}
+
+.container {
+  overflow: hidden;
+  min-height: calc(100% - 70px);
+}
+
+
+/* 侧边栏 */
+.menu {
+  float: left;
+  width: 200px;
+  height: 10000px;
+  margin-bottom: -9900px;
+  background-color: #4d5e70;
+}
+
+.menu dt,
+.menu dd {
+  height: 40px;
+  line-height: 40px;
+  color: #b3bcc5;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.menu dd{
+  cursor: pointer;
+}
+
+.menu dd {
+  padding-left: 20px;
+}
+
+/* 点击效果 */
+.menu dd.active {
+  background-color: #ddd;
+  color: #354457;
+}
+
+.menu dd:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #354457;
+}
+
+
+/* 内容区 */
+.content {
+  overflow: hidden;
+  /* background-color: #eee; */
+  height: 100%;
+}
+
+/* 学生列表 */
+table {
+  width: 100%;
+  font-size: 14px;
+}
+
+table thead {
+  background-color: #e3e8ee;
+}
+
+table tbody {
+  background-color: #fff;
+}
+
+table tr {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+table .btn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+table .edit {
+  background-color: red;
+}
+
+table .del {
+  background-color: green;
+}
+
+/* 分页按钮 */
+.turn-page{
+  text-align: center;
+}
+.turn-page button{
+  /* display: none; */
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+/* 编辑表单 遮罩 */
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+  display: none;
+}
+
+.modal .modal-content {
+  position: fixed;
+  width: 500px;
+  height: 450px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -225px;
+}
+.modal .modal-content h3{
+  padding: 10px 10px;
+}
+.modal .modal-content form{
+  width: 360px;
+  margin: 20px auto;
+}
+.modal .modal-content .btn{
+  padding: 5px 66px;
+  margin-left: -1px;
+}
+.modal::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+/* 新增学生 */
+#student-add {
+  width: 400px;
+  margin: 100px auto;
+  display: none;
+}
+
+form label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+form label.sex {
+  /* 宽度被内容撑开 */
+  width: auto;
+}
+
+form .btn {
+  padding: 2px 25px;
+  margin-left: -5px;
+}
